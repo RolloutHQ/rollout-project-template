@@ -1,0 +1,17 @@
+{
+  "name": "rollout-project-template",
+  "main": "./index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@rollout/framework": "2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11"
+  },
+  "packageManager": "yarn@3.6.4"
+}

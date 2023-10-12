@@ -1,0 +1,19 @@
+{
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "types": ["node"],
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "module": "CommonJS",
+    "moduleResolution": "Node16",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "strict": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+  }
+}
