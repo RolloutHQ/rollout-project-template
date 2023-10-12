@@ -2,6 +2,7 @@ import { defineAction } from "@rollout/framework";
 
 import { inputParamsSchema } from "./input";
 
+// Test change
 export const action = defineAction()({
   name: "My action",
   inputParamsSchema,
