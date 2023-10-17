@@ -5,15 +5,15 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@rollout/framework@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@rollout/framework@npm:2.0.0"
+"@rollout/framework@npm:2.0.4":
+  version: 2.0.4
+  resolution: "@rollout/framework@npm:2.0.4"
   dependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   peerDependencies:
     zod: ">=3.20.0"
-  checksum: 70cf777c71a2ec2f67518da78b1f837909838175bddccda170898fb01c54846e2eeb3d2e8b6f54038100c24ca8dd64463ee60146593ec89e18b5c3500361364e
+  checksum: 950e98598a7ba80e38e3d33ad6bbf1edbb133d85182c8f9416409d0f3e754dae0a8ddd5d3d051cab31ef1794d0638d4087e2681b0811d8566a02e13dd2582cb5
   languageName: node
   linkType: hard
 
@@ -110,7 +110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rollout-project-template@workspace:."
   dependencies:
-    "@rollout/framework": 2.0.0
+    "@rollout/framework": 2.0.4
     "@types/node": ^20.8.4
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
