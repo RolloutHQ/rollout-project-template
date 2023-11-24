@@ -1,6 +1,6 @@
 import { defineTriggerPayloadSchema } from "@rollout/framework";
 
 export const payloadSchema = defineTriggerPayloadSchema((t) => ({
-  id: t.string({ label: "ID" }),
-  name: t.string({ label: "Name" }),
+  id: t.string({ title: "ID" }),
+  name: t.string({ title: "Name" }),
 }));

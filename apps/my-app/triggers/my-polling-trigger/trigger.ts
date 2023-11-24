@@ -1,13 +1,16 @@
 import { definePollingTrigger } from "@rollout/framework";
 
+import { MyAppCredential } from "../../auth";
 import { inputParamsSchema } from "./input";
 import { payloadSchema } from "./payload";
 
-export const trigger = definePollingTrigger()({
+type State = Set<string>;
+
+export const trigger = definePollingTrigger<MyAppCredential, State>()({
   name: "My polling trigger",
   inputParamsSchema,
   payloadSchema,
-  async poll({ diffIdSnapshot, prevIdSnapshot, inputParams }) {
+  async poll({ inputParams, prevState }) {
     // Fetch all items from your API
     const allItems = [
       { id: "1", name: "First" },
@@ -17,8 +20,8 @@ export const trigger = definePollingTrigger()({
       .filter((i) => i.name === inputParams.name);
 
     // Compute new id snapshot and determine new items added since previous snapshot
-    const newIdSnapshot = new Set(allItems.map((a) => a.id));
-    const newItemIds = diffIdSnapshot(newIdSnapshot, prevIdSnapshot);
+    const newState = new Set(allItems.map((a) => a.id));
+    const newItemIds = diffIdSnapshot(newState, prevState);
 
     const events = allItems
       .filter((a) => newItemIds.has(a.id.toString()))
@@ -31,6 +34,19 @@ export const trigger = definePollingTrigger()({
       // Make sure events are ordered from oldest to newest
       .reverse();
 
-    return { newIdSnapshot, events };
+    return { newState, events };
   },
 });
+
+function diffIdSnapshot(
+  newSnapshot: Set<string>,
+  oldSnapshot: Set<string> | null
+) {
+  if (oldSnapshot == null) {
+    return new Set(newSnapshot);
+  }
+
+  return new Set(
+    Array.from(newSnapshot).filter((item) => oldSnapshot.has(item) === false)
+  );
+}

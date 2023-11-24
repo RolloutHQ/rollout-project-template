@@ -19,7 +19,7 @@ export const auth = defineJWTAuth<MyAppCredential>({
 
       // data can be any shape descibed by MyAppCredential
       data: {
-        apiKey: authData.apiKey,
+        apiKey: (authData as { apiKey: string }).apiKey,
       },
     };
   },

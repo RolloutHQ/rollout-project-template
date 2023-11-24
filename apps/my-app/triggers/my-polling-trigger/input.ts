@@ -1,5 +1,5 @@
-import { z } from "@rollout/framework";
+import { defineTriggerInputParamsSchema } from "@rollout/framework";
 
-export const inputParamsSchema = z.object({
-  name: z.string(),
-});
+export const inputParamsSchema = defineTriggerInputParamsSchema((t) => ({
+  name: t.string(),
+}));

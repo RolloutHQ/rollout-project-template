@@ -1,5 +1,5 @@
-import { z } from "@rollout/framework";
+import { defineActionInputParamsSchema } from "@rollout/framework";
 
-export const inputParamsSchema = z.object({
-  name: z.string(),
-});
+export const inputParamsSchema = defineActionInputParamsSchema((t) => ({
+  name: t.string(),
+}));

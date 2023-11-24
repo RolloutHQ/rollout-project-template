@@ -1,21 +1,18 @@
 import { defineHTTPHandler, handleConsumerRequest } from "@rollout/framework";
 
-export const http = defineHTTPHandler(async (req, res) => {
-  // req is standard node server IncomingMessage
-  // res is standard node server ServerResponse
-  console.log("Handle request", req.url);
+export const http = defineHTTPHandler(async (request) => {
+  // request is standard web fetch-compilant Request instance
+  console.log("Handle request", request.url);
 
   const requestValidation = await handleConsumerRequest({
-    token:
-      req.headersDistinct["authorization"]?.[0]?.replace("Bearer ", "") ?? "",
+    token: request.headers.get("authorization")?.replace("Bearer ", "") ?? "",
   });
 
   if (!requestValidation.ok) {
-    res.statusCode = 401;
-    return res.end(requestValidation.error);
+    return Response.json(requestValidation.error, { status: 401 });
   }
 
-  return res.end(
+  return Response.json(
     `Hello from http to ${requestValidation.consumer.consumerKey}`
   );
 });

@@ -5,15 +5,23 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@rollout/framework@npm:2.0.21":
-  version: 2.0.21
-  resolution: "@rollout/framework@npm:2.0.21"
+"@rollout/framework@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@rollout/framework@npm:2.1.1"
   dependencies:
+    "@sinclair/typebox": 0.31.28
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   peerDependencies:
     zod: ">=3.20.0"
-  checksum: b205ccf7976738ae329ca463a259256244e1422e5b3bc94be43dd5d1e0ed1d95d3af2a014ff5c503c168671a8ad00e4bb1d7d4244eead88eca229c2f36702889
+  checksum: de76bc1a7d2bb8544f60be25c2d09a7b15a08b16401b98980e6a5807ebde4299557654a14553feeb3174a03c4a2cc51ef07607c754ed1d79996058f9057c83d6
+  languageName: node
+  linkType: hard
+
+"@sinclair/typebox@npm:0.31.28":
+  version: 0.31.28
+  resolution: "@sinclair/typebox@npm:0.31.28"
+  checksum: 0dd8e11bb608a28f8db6aa6166a354453126249e5bbf4442654ba1c520bd10a55d0beb4cb294f4834a7619efa833a870a31902933a46548bfc24d0e0710576d2
   languageName: node
   linkType: hard
 
@@ -110,12 +118,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rollout-project-template@workspace:."
   dependencies:
-    "@rollout/framework": 2.0.21
+    "@rollout/framework": 2.1.1
     "@types/node": ^20.8.4
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     react: ^18.2.0
     react-dom: ^18.2.0
+    typescript: 5.2.2
+    zod: 3.22.4
   languageName: unknown
   linkType: soft
 
@@ -128,9 +138,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:5.2.2":
+  version: 5.2.2
+  resolution: "typescript@npm:5.2.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 7912821dac4d962d315c36800fe387cdc0a6298dba7ec171b350b4a6e988b51d7b8f051317786db1094bd7431d526b648aba7da8236607febb26cf5b871d2d3c
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>":
+  version: 5.2.2
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 0f4da2f15e6f1245e49db15801dbee52f2bbfb267e1c39225afdab5afee1a72839cd86000e65ee9d7e4dfaff12239d28beaf5ee431357fcced15fb08583d72ca
+  languageName: node
+  linkType: hard
+
 "undici-types@npm:~5.25.1":
   version: 5.25.3
   resolution: "undici-types@npm:5.25.3"
   checksum: ec9d2cc36520cbd9fbe3b3b6c682a87fe5be214699e1f57d1e3d9a2cb5be422e62735f06e0067dc325fd3dd7404c697e4d479f9147dc8a804e049e29f357f2ff
+  languageName: node
+  linkType: hard
+
+"zod@npm:3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 80bfd7f8039b24fddeb0718a2ec7c02aa9856e4838d6aa4864335a047b6b37a3273b191ef335bf0b2002e5c514ef261ffcda5a589fb084a48c336ffc4cdbab7f
   languageName: node
   linkType: hard
