@@ -18,7 +18,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinclair/typebox@npm:0.31.28":
+"@sinclair/typebox@npm:0.31.28, @sinclair/typebox@npm:^0.31.17":
   version: 0.31.28
   resolution: "@sinclair/typebox@npm:0.31.28"
   checksum: 0dd8e11bb608a28f8db6aa6166a354453126249e5bbf4442654ba1c520bd10a55d0beb4cb294f4834a7619efa833a870a31902933a46548bfc24d0e0710576d2
@@ -68,10 +68,72 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^9.0.7":
+  version: 9.0.7
+  resolution: "@types/uuid@npm:9.0.7"
+  checksum: c7321194aeba9ea173efd1e721403bdf4e7ae6945f8f8cdbc87c791f4b505ccf3dbc4a8883d90b394ef13b7c2dc778045792b05dbb23b3c746f8ea347804d448
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "cookie@npm:0.6.0"
+  checksum: f56a7d32a07db5458e79c726b77e3c2eff655c36792f2b6c58d351fb5f61531e5b1ab7f46987150136e366c65213cbe31729e02a3eaed630c3bf7334635fb410
+  languageName: node
+  linkType: hard
+
 "csstype@npm:^3.0.2":
   version: 3.1.1
   resolution: "csstype@npm:3.1.1"
   checksum: 1f7b4f5fdd955b7444b18ebdddf3f5c699159f13e9cf8ac9027ae4a60ae226aef9bbb14a6e12ca7dba3358b007cee6354b116e720262867c398de6c955ea451d
+  languageName: node
+  linkType: hard
+
+"elysia@npm:^0.7.29":
+  version: 0.7.29
+  resolution: "elysia@npm:0.7.29"
+  dependencies:
+    "@sinclair/typebox": ^0.31.17
+    cookie: ^0.6.0
+    eventemitter3: ^5.0.1
+    fast-querystring: ^1.1.2
+    memoirist: 0.1.4
+    openapi-types: ^12.1.3
+  peerDependencies:
+    "@sinclair/typebox": ">= 0.31.0"
+    openapi-types: ">= 12.0.0"
+    typescript: ">= 5.0.0"
+  peerDependenciesMeta:
+    "@sinclair/typebox":
+      optional: true
+    openapi-types:
+      optional: true
+    typescript:
+      optional: true
+  checksum: b7e908ee6d2a956739c5ea7b85f2d208f3cdd629535ca466b8e615ac4458c9e354adaae7a4040e5db5802419cdd082070124c60ca780ed6ce81ed4018d41f106
+  languageName: node
+  linkType: hard
+
+"eventemitter3@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "eventemitter3@npm:5.0.1"
+  checksum: 543d6c858ab699303c3c32e0f0f47fc64d360bf73c3daf0ac0b5079710e340d6fe9f15487f94e66c629f5f82cd1a8678d692f3dbb6f6fcd1190e1b97fcad36f8
+  languageName: node
+  linkType: hard
+
+"fast-decode-uri-component@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "fast-decode-uri-component@npm:1.0.1"
+  checksum: 427a48fe0907e76f0e9a2c228e253b4d8a8ab21d130ee9e4bb8339c5ba4086235cf9576831f7b20955a752eae4b525a177ff9d5825dd8d416e7726939194fbee
+  languageName: node
+  linkType: hard
+
+"fast-querystring@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "fast-querystring@npm:1.1.2"
+  dependencies:
+    fast-decode-uri-component: ^1.0.1
+  checksum: 7149f82ee9ac39a9c08c7ffe435b9f6deade76ae5e3675fe1835720513e8c4bc541e666b4b7b1c0c07e08f369dcf4828d00f2bee39889a90a168e1439cf27b0b
   languageName: node
   linkType: hard
 
@@ -90,6 +152,20 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 6517e24e0cad87ec9888f500c5b5947032cdfe6ef65e1c1936a0c48a524b81e65542c9c3edc91c97d5bddc806ee2a985dbc79be89215d613b1de5db6d1cfe6f4
+  languageName: node
+  linkType: hard
+
+"memoirist@npm:0.1.4":
+  version: 0.1.4
+  resolution: "memoirist@npm:0.1.4"
+  checksum: edddff7937c597ffa6187fde9bb4bc0cf5c773f0e9dc2403734b579be99ddee8dd7ddbdf00b4c3acdbdd336fab34e65f8dfa0a6221e3a9f0ef0d552a91e76e66
+  languageName: node
+  linkType: hard
+
+"openapi-types@npm:^12.1.3":
+  version: 12.1.3
+  resolution: "openapi-types@npm:12.1.3"
+  checksum: 7fa5547f87a58d2aa0eba6e91d396f42d7d31bc3ae140e61b5d60b47d2fd068b48776f42407d5a8da7280cf31195aa128c2fc285e8bb871d1105edee5647a0bb
   languageName: node
   linkType: hard
 
@@ -122,9 +198,12 @@ __metadata:
     "@types/node": ^20.8.4
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
+    "@types/uuid": ^9.0.7
+    elysia: ^0.7.29
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: 5.2.2
+    uuid: ^9.0.1
     zod: 3.22.4
   languageName: unknown
   linkType: soft
@@ -162,6 +241,15 @@ __metadata:
   version: 5.25.3
   resolution: "undici-types@npm:5.25.3"
   checksum: ec9d2cc36520cbd9fbe3b3b6c682a87fe5be214699e1f57d1e3d9a2cb5be422e62735f06e0067dc325fd3dd7404c697e4d479f9147dc8a804e049e29f357f2ff
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "uuid@npm:9.0.1"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 39931f6da74e307f51c0fb463dc2462807531dc80760a9bff1e35af4316131b4fc3203d16da60ae33f07fdca5b56f3f1dd662da0c99fea9aaeab2004780cc5f4
   languageName: node
   linkType: hard
 
