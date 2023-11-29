@@ -60,6 +60,7 @@ export const trigger = defineWebhookTrigger<MyAppCredential, RequestPayload>()({
     );
   },
 
+  // See http.ts for usage
   async handleEvent({ requestPayload }) {
     // Execute any trigger-specific logic here
     return [
