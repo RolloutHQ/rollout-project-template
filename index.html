@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollout Simple Test</title>
+    <script src="https://unpkg.com/@rollout/connect-react-dist@latest"></script>
+    <style>
+      body {font-family: Helvetica, sans-serif;;}
+    </style>
+</head>
+<body>
+    <h1>Get Ready to Rollout</h1>
+
+    <!-- Below are instructions on how to generate a token and render the AutomationsManager component  -->
+    <p>In the index.html file, update the token to render the AutomationsManager component</p>
+    <p>Generate a valid token by going to https://dashboard.rollout.com/ ➡ click on your local environment ➡ use the Token Generator at the bottom of the page</p>
+
+    <div id="rollout-container"></div>
+
+    <script>
+      const container = document.getElementById("rollout-container");
+      // Set the token below with a valid one by following the instruction above
+      const token = "YOUR_TOKEN"
+      window.Rollout.defaultTheme();
+      const ro = window.Rollout.init({ token, apiBaseUrl: 'http://localhost:3300/api' });
+      ro.renderAutomationsManager(container);
+    </script>
+</body>
+</html>
