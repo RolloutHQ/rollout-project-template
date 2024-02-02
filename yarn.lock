@@ -238,16 +238,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollout/framework@npm:2.2.35":
-  version: 2.2.35
-  resolution: "@rollout/framework@npm:2.2.35"
+"@rollout/framework@npm:^2.2.48":
+  version: 2.2.48
+  resolution: "@rollout/framework@npm:2.2.48"
   dependencies:
     "@sinclair/typebox": 0.32.10
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   peerDependencies:
     zod: ">=3.20.0"
-  checksum: 3149dad2605b84f2b690342a7477539368eac64e6b10629b6ffd624d40530f476d85daadcb10ed154137053463a23edbc96840169637f09e3ae372c6fa17f57d
+  checksum: ac509478632a0a90c516b0c462df6cfd0aa2d9a58e742e09d1ffb330d58d42f087378af32898cecaa43357f17e25927ed02f7d12a6bd693e62f82fa016dcf14e
   languageName: node
   linkType: hard
 
@@ -258,10 +258,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sinclair/typebox@npm:^0.31.17":
-  version: 0.31.28
-  resolution: "@sinclair/typebox@npm:0.31.28"
-  checksum: 0dd8e11bb608a28f8db6aa6166a354453126249e5bbf4442654ba1c520bd10a55d0beb4cb294f4834a7619efa833a870a31902933a46548bfc24d0e0710576d2
+"@sinclair/typebox@npm:^0.32.0":
+  version: 0.32.13
+  resolution: "@sinclair/typebox@npm:0.32.13"
+  checksum: 48ace21aee28ba5d81204c9a113ecb5a84f46ebe78ed849737a8bdc4e18c8198b011d562c498f4b704c62fded369bdc20107372c2b30773d5651e5fb80a6b0ce
   languageName: node
   linkType: hard
 
@@ -348,13 +348,6 @@ __metadata:
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
   checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
-  languageName: node
-  linkType: hard
-
-"@types/uuid@npm:^9.0.7":
-  version: 9.0.7
-  resolution: "@types/uuid@npm:9.0.7"
-  checksum: c7321194aeba9ea173efd1e721403bdf4e7ae6945f8f8cdbc87c791f4b505ccf3dbc4a8883d90b394ef13b7c2dc778045792b05dbb23b3c746f8ea347804d448
   languageName: node
   linkType: hard
 
@@ -751,15 +744,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"elysia@npm:^0.7.29":
-  version: 0.7.29
-  resolution: "elysia@npm:0.7.29"
+"elysia@npm:^0.8.15":
+  version: 0.8.15
+  resolution: "elysia@npm:0.8.15"
   dependencies:
-    "@sinclair/typebox": ^0.31.17
+    "@sinclair/typebox": ^0.32.0
     cookie: ^0.6.0
     eventemitter3: ^5.0.1
+    fast-decode-uri-component: ^1.0.1
     fast-querystring: ^1.1.2
-    memoirist: 0.1.4
+    memoirist: 0.1.10
     openapi-types: ^12.1.3
   peerDependencies:
     "@sinclair/typebox": ">= 0.31.0"
@@ -772,7 +766,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: b7e908ee6d2a956739c5ea7b85f2d208f3cdd629535ca466b8e615ac4458c9e354adaae7a4040e5db5802419cdd082070124c60ca780ed6ce81ed4018d41f106
+  checksum: be582b2a46ccad28dceae89efec2cc94fcd051e0f0a057766b65f826e2bf01e9a2e676ff6a00bf1d8c62b2070ae668121f90449e7805a1548233184f5762f08c
   languageName: node
   linkType: hard
 
@@ -1432,10 +1426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoirist@npm:0.1.4":
-  version: 0.1.4
-  resolution: "memoirist@npm:0.1.4"
-  checksum: edddff7937c597ffa6187fde9bb4bc0cf5c773f0e9dc2403734b579be99ddee8dd7ddbdf00b4c3acdbdd336fab34e65f8dfa0a6221e3a9f0ef0d552a91e76e66
+"memoirist@npm:0.1.10":
+  version: 0.1.10
+  resolution: "memoirist@npm:0.1.10"
+  checksum: c6f54b276d387b34139a9150a044d75cf3b27a45f2bab8ce39df656068b6beb97f35e4dcc6ec4ba1870cb5b2d737888a4dc92fa2f7cc35e29df8665ad96b4b2a
   languageName: node
   linkType: hard
 
@@ -1847,17 +1841,14 @@ __metadata:
   resolution: "rollout-project-template@workspace:."
   dependencies:
     "@rollout/cli": ^2.2.22
-    "@rollout/framework": 2.2.35
+    "@rollout/framework": ^2.2.48
     "@types/node": ^20.8.4
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
-    "@types/uuid": ^9.0.7
-    elysia: ^0.7.29
+    elysia: ^0.8.15
     react: ^18.2.0
     react-dom: ^18.2.0
-    typescript: 5.2.2
-    uuid: ^9.0.1
-    zod: 3.22.4
+    typescript: ^5.3.3
   languageName: unknown
   linkType: soft
 
@@ -2123,23 +2114,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
+"typescript@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 7912821dac4d962d315c36800fe387cdc0a6298dba7ec171b350b4a6e988b51d7b8f051317786db1094bd7431d526b648aba7da8236607febb26cf5b871d2d3c
+  checksum: 2007ccb6e51bbbf6fde0a78099efe04dc1c3dfbdff04ca3b6a8bc717991862b39fd6126c0c3ebf2d2d98ac5e960bcaa873826bb2bb241f14277034148f41f6a2
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+"typescript@patch:typescript@^5.3.3#~builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 0f4da2f15e6f1245e49db15801dbee52f2bbfb267e1c39225afdab5afee1a72839cd86000e65ee9d7e4dfaff12239d28beaf5ee431357fcced15fb08583d72ca
+  checksum: f61375590b3162599f0f0d5b8737877ac0a7bc52761dbb585d67e7b8753a3a4c42d9a554c4cc929f591ffcf3a2b0602f65ae3ce74714fd5652623a816862b610
   languageName: node
   linkType: hard
 
@@ -2212,15 +2203,6 @@ __metadata:
   dependencies:
     prepend-http: ^2.0.0
   checksum: 1040e357750451173132228036aff1fd04abbd43eac1fb3e4fca7495a078bcb8d33cb765fe71ad7e473d9c94d98fd67adca63bd2716c815a2da066198dd37217
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "uuid@npm:9.0.1"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 39931f6da74e307f51c0fb463dc2462807531dc80760a9bff1e35af4316131b4fc3203d16da60ae33f07fdca5b56f3f1dd662da0c99fea9aaeab2004780cc5f4
   languageName: node
   linkType: hard
 

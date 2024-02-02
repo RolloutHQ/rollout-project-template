@@ -2,7 +2,6 @@ import {
   defineWebhookTrigger,
   getPublicRolloutServiceUrl,
 } from "@rollout/framework";
-import { v4 as uuid } from "uuid";
 
 import { MyAppCredential } from "../../auth";
 import { inputParamsSchema } from "./input";
@@ -22,12 +21,12 @@ export const trigger = defineWebhookTrigger<MyAppCredential, RequestPayload>()({
   inputParamsSchema,
   payloadSchema,
 
-  async subscribe({ credential, inputParams }) {
+  async subscribe({ automation, credential, inputParams }) {
     // Make the request to create the subscription
-    const webhookUrlId = uuid();
-
     // Refer to http.ts to see how this endpoint is implemented.
-    const targetUrl = `${getPublicRolloutServiceUrl()}/api/apps/my-app/webhooks/${webhookUrlId}`;
+    const targetUrl = `${getPublicRolloutServiceUrl()}/api/apps/my-app/webhooks/${
+      automation.id
+    }`;
 
     const response = await fetch("https://example.com/subscriptions", {
       method: "POST",
@@ -44,13 +43,12 @@ export const trigger = defineWebhookTrigger<MyAppCredential, RequestPayload>()({
     // Return whatever you need to store for the subscription
     return {
       subscriptionId: response.subscriptionId,
-      webhookUrlId,
     };
   },
 
   async unsubscribe({ credential, subscription }) {
     await fetch(
-      `https://example.com/subscriptions/${subscription.subscriptionId}`,
+      `https://example.com/subscriptions/${subscription.data.subscriptionId}`,
       {
         method: "DELETE",
         headers: {

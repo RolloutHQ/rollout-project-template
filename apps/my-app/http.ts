@@ -1,10 +1,10 @@
 import {
   defineHTTPHandler,
-  getLiveAutomations,
+  getAutomation,
   handleConsumerRequest,
   handleWebhookRequestJob,
 } from "@rollout/framework";
-import Elysia, { t } from "elysia";
+import { Elysia, t, error } from "elysia";
 
 import { triggers } from "./triggers";
 
@@ -25,24 +25,20 @@ const router = new Elysia()
   })
 
   .post(
-    "/webhooks/:webhookUrlId",
-    async ({ body, request, params, set }) => {
+    "/webhooks/:automationId",
+    async ({ body, request, params }) => {
       if (request.headers.get("X-Webhook-Secret") !== "MY_SECRET") {
-        set.status = 401;
-        return "Invalid secret";
+        throw error(401, "Invalid secret");
       }
 
-      const automations = await getLiveAutomations({
-        where: { trigger: { appKey: "my-app" } },
+      const automation = await getAutomation({
+        where: { id: params.automationId },
+      }).catch(() => {
+        throw error(400, "Automation not found");
       });
 
-      const automation = automations.find(
-        (a) => a.trigger.subscription?.data?.webookUrlId === params.webhookUrlId
-      );
-
-      if (automation == null) {
-        set.status = 400;
-        return "Automation not found";
+      if (!automation.live) {
+        throw error(400, "Automation is not live");
       }
 
       handleWebhookRequestJob({
