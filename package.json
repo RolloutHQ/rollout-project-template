@@ -4,7 +4,6 @@
   "license": "MIT",
   "dependencies": {
     "@rollout/framework": "^2.2.48",
-    "elysia": "^0.8.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -17,7 +16,8 @@
   },
   "scripts": {
     "typecheck": "tsc",
-    "rollout": "rollout"
+    "rollout": "rollout",
+    "dev": "rollout dev --project-key=my-project"
   },
   "packageManager": "yarn@3.6.4"
 }
