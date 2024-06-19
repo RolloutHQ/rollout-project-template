@@ -5,17 +5,25 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@elysiajs/eden@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@elysiajs/eden@npm:0.8.1"
+"@elysiajs/eden@npm:1.0.5":
+  version: 1.0.5
+  resolution: "@elysiajs/eden@npm:1.0.5"
   dependencies:
-    superjson: ^2.2.1
+    "@elysiajs/stream": rc
   peerDependencies:
-    elysia: ">= 0.8.0"
-  peerDependenciesMeta:
-    "@sinclair/typebox":
-      optional: true
-  checksum: 71919620bb3d983b6a85f3edf1ea4761197d8469d35e12368d209127340d769e53247bd006ea7f3cfcaa24aa526d255e4dace3193fe9ca36bbcec4a1190994f4
+    elysia: ">= 1.0.2"
+  checksum: 287ad46f6edf42fbb1bf66d127b91e5c06adb7c1305c999b1de343ae57fc6d43e9f6468edf6c59063a54b86b655a10fc7cb48aafe26734a2b04b2c8ee9d77db7
+  languageName: node
+  linkType: hard
+
+"@elysiajs/stream@npm:rc":
+  version: 1.0.0-rc.0
+  resolution: "@elysiajs/stream@npm:1.0.0-rc.0"
+  dependencies:
+    nanoid: ^5.0.1
+  peerDependencies:
+    elysia: ">= 1.0.0-rc.0"
+  checksum: 2d698dc67d1a3429f1a82e09c4b75119627158db3fb653a88f532a220bb22b8897d67a502c6351a7ea7b9496938d941299d4d6d32a76a07c66155683bab7fc2d
   languageName: node
   linkType: hard
 
@@ -216,14 +224,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollout/cli@npm:^2.2.22":
-  version: 2.2.22
-  resolution: "@rollout/cli@npm:2.2.22"
+"@rollout/cli@npm:^2.2.176":
+  version: 2.2.176
+  resolution: "@rollout/cli@npm:2.2.176"
   dependencies:
-    "@elysiajs/eden": 0.8.1
+    "@elysiajs/eden": 1.0.5
     chokidar: 3.5.3
     cleye: 1.3.2
-    docker-compose: ^0.24.3
+    docker-compose: 0.24.4
     nanoid: 3.3.6
     open: 8.4.2
     tsx: 4.6.2
@@ -234,20 +242,20 @@ __metadata:
     zod: 3.22.4
   bin:
     rollout: dist/cli.cjs.js
-  checksum: 02bfbb1d1487bedfa6635ec12b81b339d7bec144c5f755866bc9e2a002c0eb975512ec231cd22146ac441f550dc182dffd274ff23606aca27e7c3c82532be842
+  checksum: 97f40f2fee1573439888fef5514f62ce4b66bd682168d824e1cd5ddeb6600b01a51b8e3edf8f1696aa7c4e2be67f366c6763fefba51a8a9476d404b049bd081d
   languageName: node
   linkType: hard
 
-"@rollout/framework@npm:^2.2.48":
-  version: 2.2.48
-  resolution: "@rollout/framework@npm:2.2.48"
+"@rollout/framework@npm:^2.2.176":
+  version: 2.2.176
+  resolution: "@rollout/framework@npm:2.2.176"
   dependencies:
     "@sinclair/typebox": 0.32.10
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   peerDependencies:
     zod: ">=3.20.0"
-  checksum: ac509478632a0a90c516b0c462df6cfd0aa2d9a58e742e09d1ffb330d58d42f087378af32898cecaa43357f17e25927ed02f7d12a6bd693e62f82fa016dcf14e
+  checksum: a439716ac4be603d7984a368cddff781cb9f4eaa3a8c4dfd53dda13d5ce397a2eaa5dc5fb1581ea19a789f7eeba143fed758c0cbd15b3750fff0d952d58226e9
   languageName: node
   linkType: hard
 
@@ -615,15 +623,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-anything@npm:^3.0.2":
-  version: 3.0.5
-  resolution: "copy-anything@npm:3.0.5"
-  dependencies:
-    is-what: ^4.1.8
-  checksum: d39f6601c16b7cbd81cdb1c1f40f2bf0f2ca0297601cf7bfbb4ef1d85374a6a89c559502329f5bada36604464df17623e111fe19a9bb0c3f6b1c92fe2cbe972f
-  languageName: node
-  linkType: hard
-
 "cross-spawn@npm:^7.0.0":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -698,12 +697,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"docker-compose@npm:^0.24.3":
-  version: 0.24.3
-  resolution: "docker-compose@npm:0.24.3"
+"docker-compose@npm:0.24.4":
+  version: 0.24.4
+  resolution: "docker-compose@npm:0.24.4"
   dependencies:
     yaml: ^2.2.2
-  checksum: b2149eafb6e0a37ff4595044fe63d2fac23483afab06bca71cece78df4bae6f796b0a123854957addda77cc0559f205bc03cf3984ced816161e30e7f247d88e7
+  checksum: 5af05f0538d9d8f6853017741c634e537f77a72f7f47aca3a88200aaf13c761724280f4e28d704893e9e1bdc8dd4b0317e562aeca51006f390477db0697cc7ce
   languageName: node
   linkType: hard
 
@@ -1212,13 +1211,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-what@npm:^4.1.8":
-  version: 4.1.16
-  resolution: "is-what@npm:4.1.16"
-  checksum: baf99e4b9f06003ceb3b2eea4a1e17179524ee3a6310dc44903eb675cfe3c0a17819ab057bb1ae6ba7ca4939ae4bdfcc6a0c4210a8457aff1756abd3607b713c
-  languageName: node
-  linkType: hard
-
 "is-wsl@npm:^2.2.0":
   version: 2.2.0
   resolution: "is-wsl@npm:2.2.0"
@@ -1495,6 +1487,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^5.0.1":
+  version: 5.0.7
+  resolution: "nanoid@npm:5.0.7"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 25ab0b0cf9082ae6747f0f55cec930e6c1cc5975103aa3a5fda44be5720eff57d9b25a8a9850274bfdde8def964b49bf03def71c6aa7ad1cba32787819b79f60
+  languageName: node
+  linkType: hard
+
 "negotiator@npm:^0.6.3":
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
@@ -1763,8 +1764,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rollout-project-template@workspace:."
   dependencies:
-    "@rollout/cli": ^2.2.22
-    "@rollout/framework": ^2.2.48
+    "@rollout/cli": ^2.2.176
+    "@rollout/framework": ^2.2.176
     "@types/node": ^20.8.4
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
@@ -1939,15 +1940,6 @@ __metadata:
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
   checksum: 1074ccb63270d32ca28edfb0a281c96b94dc679077828135141f27d52a5a398ef5e78bcf22809d23cadc2b81dfbe345eb5fd8699b385c8b1128907dec4a7d1e1
-  languageName: node
-  linkType: hard
-
-"superjson@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "superjson@npm:2.2.1"
-  dependencies:
-    copy-anything: ^3.0.2
-  checksum: 42f327474a9de80165a70641d66c2afd9ce7f0eb241c32af7e2d5777f893aac6defa6c1584bd35f022658dbdfd2b7bcf0d170acfe62a07e7d1d01238cf5b4a57
   languageName: node
   linkType: hard
 

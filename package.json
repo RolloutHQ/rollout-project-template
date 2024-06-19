@@ -3,12 +3,12 @@
   "main": "./index.ts",
   "license": "MIT",
   "dependencies": {
-    "@rollout/framework": "^2.2.48",
+    "@rollout/framework": "^2.2.176",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@rollout/cli": "^2.2.22",
+    "@rollout/cli": "^2.2.176",
     "@types/node": "^20.8.4",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
